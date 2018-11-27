@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 
 from .models import Schedule
 
@@ -11,3 +11,8 @@ class HomePageView(ListView):
 
 class CreateScheduleView(TemplateView):
 	template_name = 'create_schedule.html'
+
+
+class ScheduleDetailView(DetailView):
+	model = Schedule
+	template_name = 'schedule.html'
