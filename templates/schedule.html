@@ -1,1 +1,58 @@
 {% extends 'base.html' %}
+
+{% block header %}
+
+	<h1>{{ schedule.title }}</h1>
+	<h5>Focus: {{ schedule.focus }}</h5>
+	<h5>Number of Weeks: {{ schedule.number_of_weeks }}</h5>
+
+{% endblock %}
+
+{% block content %}
+
+	{% for i in "xxxx" %}
+		<table class="table table-striped">
+  			<thead class="thead-dark">
+    			<tr>
+      				<th scope="col">Week {{ forloop.counter }}</th>
+      				<th scope="col">Main lift</th>
+      				<th scope="col">Aux. Lift One</th>
+      				<th scope="col">Aux. Lift Two</th>
+      				<th scope="col">Aux. Lift Three</th>
+      				<th scope="col">Cardio</th>
+      				<th scope="col">Abs</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<tr>
+      				<th scope="row">Day 1</th>
+      				<td>3 sets of 1-3 reps of Bench Press</td>
+      				<td>3 sets of 5-8 reps of Incline Barbell Bench</td>
+      				<td>3 sets of 5-8 reps of Push-ups (to failure)</td>
+      				<td>3 sets of 5-8 reps of Chest Flys</td>
+      				<td>20 minute jog</td>
+      				<td>In-and-Out Abs</td>
+    			</tr>
+    			<tr>
+      				<th scope="row">Day 2</th>
+      				<td>3 sets of 1-3 reps of Deadlifts</td>
+      				<td>3 sets of 5-8 reps of Eccentric Hamstring Extensions</td>
+      				<td>3 sets of 5-8 reps of Cable Row</td>
+      				<td>3 sets of 5-8 reps of Lat Pulldown</td>
+      				<td>30 minute biking</td>
+      				<td>20 crunches</td>
+    			</tr>
+    			<tr>
+      				<th scope="row">Day 3</th>
+      				<td>3 sets of 1-3 reps of Squats</td>
+      				<td>3 sets of 5-8 reps of Lunges</td>
+      				<td>3 sets of 5-8 reps of Lateral Bandwalks</td>
+      				<td>3 sets of 5-8 reps of Goblet Squat</td>
+      				<td>20 minute jog</td>
+      				<td>Romanian Twists</td>
+    			</tr>
+  			</tbody>
+		</table>
+	{% endfor %}
+
+{% endblock %}
